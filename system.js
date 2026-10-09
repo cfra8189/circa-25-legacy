@@ -14,6 +14,12 @@
     var menu = document.getElementById('ltl-system-menu');
     if (!trigger || !overlay || !menu) return;
 
+    var configuredBase = window.LUCTHELEO_CONFIG && window.LUCTHELEO_CONFIG.LUCTHELEO_URL;
+    var destinationBase = String(configuredBase || 'https://luctheleo.com').replace(/\/+$/, '');
+    menu.querySelectorAll('[data-ltl-path]').forEach(function (link) {
+      link.href = destinationBase + (link.getAttribute('data-ltl-path') || '/');
+    });
+
     var open = false;
 
     function openMenu() {
