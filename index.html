@@ -36,7 +36,7 @@
     <div id="splash-screen">
 
         <div id="splash-background-glitch">
-            <video autoplay muted playsinline loop id="splash-bg-video">
+            <video autoplay muted playsinline loop preload="auto" id="splash-bg-video">
                 <source src="videos/bg5.mp4" type="video/mp4">
             </video>
             
@@ -64,11 +64,12 @@
     </div>
     
     <div id="video-background-container">
-        <video muted playsinline class="bg-video-player" id="bg-video-1">
+        <video muted playsinline preload="auto" class="bg-video-player" id="bg-video-1">
             <source src="videos/home_LA1.mp4" type="video/mp4">
         </video>
-        <video muted playsinline class="bg-video-player" id="bg-video-2">
-            </video>
+        <video muted playsinline preload="auto" class="bg-video-player" id="bg-video-2">
+            <source src="videos/bg2.mp4" type="video/mp4">
+        </video>
         <div id="video-overlay"></div>
     </div>
 
